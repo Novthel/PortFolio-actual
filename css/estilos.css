@@ -1,0 +1,152 @@
+.nav-menu {
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  margin-bottom: 0;
+}
+.nav-menu li {
+  display: inline;
+  list-style: none;
+  margin-right: 1rem;
+}
+.nav-menu li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.interests {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 6rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.interests i {
+  font-size: 2rem;
+}
+.interests span {
+  font-size: 0.7rem;
+}
+
+.btn-base {
+  background: none;
+  padding: 0.6rem 2rem;
+  border-radius: 1.2rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.938);
+  margin-top: 0;
+  padding: 1rem 0;
+}
+.nav-header .nav-menu li a {
+  color: rgb(232, 240, 240);
+}
+.nav-header .nav-menu li a:hover {
+  color: rgb(8, 121, 121);
+}
+.nav-header .nav-alias {
+  font-size: 2rem;
+  color: azure;
+  justify-content: flex-start;
+}
+.nav-header .hamb {
+  font-size: 2rem;
+  color: azure;
+}
+
+.sec-home {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.808)), url("../assets/img/programming.jpg");
+  height: 100vh;
+  background-size: cover;
+}
+
+.sec-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.87);
+  color: azure;
+}
+.sec-about .about {
+  max-width: 60rem;
+  padding: 4rem 2rem;
+}
+.sec-about .about .about-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+.sec-about .about .about-info {
+  font-size: 1rem;
+}
+.sec-about .about .about-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+}
+.sec-about .about .about-data .about-data-contact {
+  margin-top: 0;
+  width: 25rem;
+}
+.sec-about .about .about-data .about-data-contact .about-contact-title {
+  font-size: 1.7rem;
+}
+.sec-about .about .about-data .about-data-contact .about-contact {
+  list-style: none;
+  padding-left: 0;
+}
+.sec-about .about .about-data .about-data-interests {
+  width: 25rem;
+}
+.sec-about .about .about-data .about-data-interests .about-interest-title {
+  font-size: 1.7rem;
+}
+.sec-about .about .about-data .about-data-interests .container-interests {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 8rem);
+  place-items: start;
+  row-gap: 0.7rem;
+}
+.sec-about .about .about-data .about-data-interests .container-interests .interests {
+  background-color: rgba(48, 46, 46, 0.87);
+  transition: 0.3s;
+}
+.sec-about .about .about-data .about-data-interests .container-interests .interests:hover {
+  background-color: rgb(8, 121, 121);
+}
+.sec-about .about .btn-cv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+.sec-about .about .btn-cv .btn-base {
+  color: azure;
+  border: 1px solid azure;
+  transition: 0.3s;
+}
+.sec-about .about .btn-cv .btn-base i {
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+.sec-about .about .btn-cv .btn-base:hover {
+  background-color: rgb(8, 121, 121);
+}
+
+/*# sourceMappingURL=estilos.css.map */

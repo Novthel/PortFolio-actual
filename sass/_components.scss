@@ -1,0 +1,43 @@
+
+
+.nav-menu {
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    margin-bottom: 0;
+  
+    li{
+        display: inline;
+        list-style: none;
+        margin-right: 1rem;
+       
+        a {
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.interests {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 6rem;
+    border: none;
+    border-radius: 0.5rem;
+    i {
+        font-size: 2rem;
+    }
+    span {
+        font-size: 0.7rem;
+    }
+}
+
+.btn-base {
+    background: none;
+    padding: 0.6rem 2rem;
+    border-radius: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+}

@@ -1,0 +1,113 @@
+@use "components";
+@use "mixin" as *;
+@use "variables" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+.nav-header {
+    @include flex(space-around, center);
+    background-color: $background-color-nav;
+    margin-top: 0;
+    padding: 1rem 0;
+    .nav-menu {
+        li{
+            a{
+                color: rgb(232, 240, 240);
+                &:hover {
+                    color: rgb(8, 121, 121); 
+                }
+            }
+        }
+    }
+    .nav-alias {
+        font-size: 2rem;
+        color: $color-text-dark;
+        justify-content: flex-start;
+    }
+    .hamb {
+        font-size: 2rem;
+        color: $color-text-dark;
+    }
+}
+
+.sec-home {
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.815), rgba(0, 0, 0, 0.808)), url("../assets/img/programming.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+.sec-about {
+    @include flex(center, center);
+    height: 100vh;
+    background-color: $background-color-dark;
+    color: $color-text-dark;
+   
+    .about {
+       max-width: 60rem;
+       padding: 4rem 2rem;
+       .about-title {
+        text-align: center;
+        margin: 2rem 0;
+       }
+       .about-info {
+        font-size: 1rem;
+       }
+       .about-data {
+        @include flex(center, center);
+        padding: 1rem;
+        gap: 1rem;
+        .about-data-contact {
+            margin-top: 0;
+            width: 25rem; 
+            .about-contact-title {
+                font-size: 1.7rem;
+            }
+            .about-contact {
+                list-style: none;
+                padding-left: 0;
+            }
+
+        }
+        .about-data-interests {
+            width: 25rem; 
+            .about-interest-title {
+               font-size: 1.7rem;
+            }
+            .container-interests {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, 8rem);
+                place-items: start;
+                row-gap: 0.7rem;
+                .interests {
+                    background-color:  rgba(48, 46, 46, 0.87);
+                    transition: .3s;
+                    &:hover {
+                        background-color: rgb(8, 121, 121); 
+                    }
+                }
+                
+            }
+        }
+       }
+       .btn-cv {
+        @include flex(center, center);
+        padding: 1.5rem;
+        .btn-base {
+            color: $color-text-dark;
+            border: 1px solid $color-text-dark ;
+            transition: .3s;
+            i {
+                font-weight: 700;
+                margin-left: 0.5rem;
+            }
+            &:hover {
+                background-color: rgb(8, 121, 121); 
+            }
+        }
+       }
+    }
+}
