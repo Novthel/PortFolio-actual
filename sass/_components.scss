@@ -3,13 +3,12 @@
 .nav-menu {
     justify-content: center;
     align-items: center;
-    padding: 0.8rem;
     margin-bottom: 0;
   
     li{
         display: inline;
         list-style: none;
-        margin-right: 1rem;
+        margin-right: 1.5rem;
        
         a {
             text-decoration: none;
@@ -18,26 +17,73 @@
     }
 }
 
-.interests {
+.sec-title {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.container-icon-info {
     display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 6rem;
-    border: none;
-    border-radius: 0.5rem;
-    i {
-        font-size: 2rem;
-    }
-    span {
-        font-size: 0.7rem;
+    .icon-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 7rem;
+        padding: 0.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        i {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        span {
+            font-size: 0.6rem;
+        }
     }
 }
 
 .btn-base {
     background: none;
-    padding: 0.6rem 2rem;
-    border-radius: 1.2rem;
+    padding: 0.4rem 2rem;
+    border-radius: 1rem;
     font-size: 1.1rem;
     font-weight: 700;
+}
+
+.card-project {
+    width: 22rem;
+    position: relative;
+    .card-img {
+        object-fit: contain;
+    }
+    .overlay {
+        top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        transition: all 0.5s ease-in-out;
+        .overlay-title {
+            font-size: 1.2rem;
+        }
+        .overlay-parrafo {
+            font-size: 0.7rem;
+            padding: 1rem 0;
+        }
+        &:hover {
+            transform: scale(1.02);
+            opacity: 1;
+        }
+    }
 }

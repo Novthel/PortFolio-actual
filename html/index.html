@@ -1,29 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PortFolio</title>
+    <meta name="author" content="Novthel">
+    <title>Oscar Novoa - Frontend Develop</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
     
     <header class="nav-header">
         <div class="nav-alias">
-            Novthel
+            <strong>Novthel</strong>
         </div>
-        <ul class="nav-menu">
+        <ul class="nav-menu d-none d-md-block ">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#about">Acerca</a></li>
             <li><a href="#skill">Habilidades</a></li>
             <li><a href="#projects">Proyectos</a></li>
             <li><a href="#contact">Contacto</a></li>
         </ul>
-        <div class="hamb">
-            <i class="bi bi-list"></i>
+        <div class="hamb d-md-none">
+            <i class="fa-solid fa-bars"></i>
         </div> 
     </header>
 
@@ -41,9 +42,10 @@
                 </div>
             </div>
         </section>
+
         <section class="sec-about" id="about">
             <div class="about">
-                <div class="about-title">
+                <div class="sec-title">
                     <h2>SOBRE MI</h2>
                 </div>
                 <p class="about-info"> Soy un apasionado por el mundo de la tecnología en especial la programación. Ingeniero en Electrónica y Desarrollador web en continua formacion. <br/> 
@@ -52,40 +54,40 @@
                     Proactivo, autodidacta con excelente disposición para el aprendizaje y con experiencia en trabajo en equipo mediante metodología SCRUM.
                  </p>
                  <div class="about-data" >
-                    <div class="about-data-contact">
+                    <div class="about-data-contact col-10 col-sm-5">
                         <h3 class="about-contact-title">Datos Personales</h3>
                         <ul class="about-contact">
                             <li>Nacionalidad: Colombiano</li>
                             <li>Telefono: +57 302-2865409</li>
                             <li>Email: Novthel@live.com</li>
-                            <li>Ocupacion: Desarrollador Freelance</li>
+                            <li>Ocupacion: Desarrollador Front-end</li>
                         </ul>
                     </div>
-                    <div class="about-data-interests">
+                    <div class="about-data-interests col-10 col-sm-6">
                         <h3 class="about-interest-title">Intereses</h3>
-                        <div class="container-interests">
-                            <div class="interests">
-                                <i class="bi bi-microsoft"></i>
+                        <div class="container-icon-info">
+                            <div class="icon-info">
+                                <i class="fa-brands fa-windows"></i>
                                 <span>WINDOWS</span>
                             </div>
-                            <div class="interests">
-                                <i class="bi bi-cpu-fill"></i>
+                            <div class="icon-info">
+                                <i class="fa-solid fa-microchip"></i>
                                 <span>TECNOLOGIA</span>
                             </div>
-                            <div class="interests">
-                                <i class="bi bi-book"></i>
+                            <div class="icon-info">
+                                <i class="fa-solid fa-book"></i>
                                 <span>LIBROS</span>
                             </div>
-                            <div class="interests">
-                                <i class="bi bi-car-front-fill"></i>
+                            <div class="icon-info">
+                                <i class="fa-solid fa-car"></i>
                                 <span>AUTOS</span>
                             </div>
-                            <div class="interests">
-                                <i class="bi bi-camera2"></i>
-                                <span>FOTOS</span>
+                            <div class="icon-info">
+                                <i class="fa-solid fa-camera"></i>
+                                <span>FOTOGRAFIA</span>
                             </div>
-                            <div class="interests">
-                                <i class="bi bi-music-note-beamed"></i>
+                            <div class="icon-info">
+                                <i class="fa-solid fa-headphones"></i>
                                 <span>MUSICA</span>
                             </div>
 
@@ -94,15 +96,218 @@
                     </div>
                  </div>
                  <div class="btn-cv">
-                    <button class="btn-base">Descargar CV <i class="bi bi-download"></i></button>
+                    <button class="btn-base"><span>Descarga CV</span> <i class="fa-solid fa-angles-down"></i></button>
                  </div>
             </div>
 
         </section>
-        <section class="sec-skill" id="skill">
+
+        <section class="sec-skill" id="skill"> 
+            <div class="sec-title">
+                <h2>SKILL</h2>
+            </div>
+            <div class="skill-data">
+                <div class="technical-skills col-12 col-sm-5 col-lg-4">
+                    <h3 class="skill-title">TECHNICAL SKILLS</h3>
+                    <div class="container-icon-info">
+                        <div class="icon-info">
+                            <i class="fa-brands fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-brands fa-css3"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-brands fa-sass"></i>
+                            <span>SASS</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-brands fa-bootstrap"></i>
+                            <span>BOOTSTRAP 5</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-brands fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-brands fa-react"></i>
+                            <span>ReactJS</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-brands fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-brands fa-git-alt"></i>
+                            <span>GIT</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-solid fa-database"></i>
+                            <span>MongoDB</span>
+                        </div>
+
+                </div>
+                
+                </div>
+                <div class="professional-skills col-12 col-sm-5 col-lg-4">
+                    <h3 class="skill-title">PROFESSIONAL SKILLS</h3>
+                    <div class="container-icon-info">
+                        <div class="icon-info">
+                            <i class="fa-solid fa-people-group"></i>
+                            <span>TRABAJO EN EQUIPO</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            <span>CREATIVIDAD</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-solid fa-comments"></i>
+                            <span>COMUNICACION</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <span>AUTODIDACTA</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-solid fa-hourglass-start"></i>
+                            <span>GESTION DEL TIEMPO</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-solid fa-arrow-up-right-dots"></i>
+                            <span>DEDICACION</span>
+                        </div>
+                        <div class="icon-info">
+                            <i class="fa-sharp fa-solid fa-circle-check"></i>
+                            <span>SOLUCION DE PROBLEMAS</span>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </section>
+
+        <section class="sec-projects" id="projects">
+            <div class="sec-title">
+                <h2>PROYECTOS</h2>
+            </div>
+            <div class="container-projects">
+                <div class="card-project">
+                    <img class="card-img" src="../assets/img/panaderia.jpg" alt="img-panaderia"> 
+                    <div class="overlay">
+                        <h4 class="overlay-title">
+                            PANADERIA-WEB
+                        </h4>
+                        <p class="overlay-parrafo">
+                            Elaborada con ReactJS, SASS, Bootstrap5. <br>
+                            APP de Gestion de pedidos de una panaderia on-line. <br>
+                            EN DESARROLLO ...  <i class="fa-solid fa-person-digging"></i>
+                        </p>
+                        <a href="https://novthel-panaderia-web.netlify.app/" class="btn-base"
+                        target="_blank" rel="noreferrer noopener" >
+                            Website <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-project">
+                    <img class="card-img" src="../assets/img/cine.jpg" alt="img-cine">
+                    <div class="overlay">
+                        <h4 class="overlay-title">
+                            BUSCADOR DE PELICULAS
+                        </h4>
+                        <p class="overlay-parrafo">
+                            Elaborado en ReactJS - CSS Modules. <br>
+                            APP de busqueda de Peliculas Consultando la API TMDb
+                        </p>
+                        <a href="https://cinema-novthel.netlify.app/" class="btn-base"
+                        target="_blank" rel="noreferrer noopener" >
+                            Website <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-project">
+                    <img class="card-img" src="../assets/img/engineer.jpg" alt="img-engineer">
+                    <div class="overlay">
+                        <h4 class="overlay-title">
+                            SOFTWARE DE CHEQUEO DE MANTENIMIENTO
+                        </h4>
+                        <p class="overlay-parrafo">
+                                Elaborada en ReactJS -Redux-Toolkit - SASS - Bootstrap5. <br>
+                                APP de control de las diferentes labores de mantenimiento de una empresa. <br>
+                                EN DESARROLLO ...  <i class="fa-solid fa-person-digging"></i>
+                        </p>
+                        <a href="https://novthel-maintenance-software.netlify.app/" class="btn-base"
+                        target="_blank" rel="noreferrer noopener" >
+                            Website <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card-project">
+                    <img class="card-img" src="../assets/img/landing-page.jpg" alt="img-landing-page">
+                    <div class="overlay">
+                        <h4 class="overlay-title">
+                            PANADERIA-WEB
+                        </h4>
+                        <p class="overlay-parrafo">
+                            Pagina elaborada con tecnologia ReactJS, SASS, Bootstrap5
+                        </p>
+                        <a href="https://novthel-panaderia-web.netlify.app/" class="btn-base"
+                        target="_blank" rel="noreferrer noopener" >
+                            Website <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
 
         </section>
+
+        <section class="sec-contact" id="contact">
+            <div class="sec-title">
+                <h2>CONTACTO</h2>
+            </div>
+            <div class="container">
+                <form action="">
+                    <div class="data-input">
+                        <label for="name">
+                            <span>Nombre</span>
+                            <input type="text" name="nombre">
+                        </label>
+                        <label for="email">
+                            <span>Email</span>
+                            <input type="email" name="email">
+                        </label>
+                    </div>
+                    <label for="tema">
+                        <span>Tema</span>
+                        <input type="text" name="tema">
+                    </label>
+                    <label for="mensaje">
+                        <span class="d-flex flex-start">Mensaje</span>
+                        <textarea type="text" name="mensaje"></textarea>
+                    </label>
+                    <div class="btn-form">
+                        <button type="submit" class="btn-base">Enviar</button>
+                    </div>
+                    
+                </form>
+
+            </div>
+         
+        </section>
     </main>
+    <footer class="sec-footer">
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-github"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-skype"></i></a>
+           
+        </div>
+
+    </footer>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> 
 </body>

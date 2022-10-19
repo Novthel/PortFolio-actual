@@ -1,28 +1,23 @@
 .nav-menu {
   justify-content: center;
   align-items: center;
+  padding: 0.8rem;
   margin-bottom: 0;
 }
 .nav-menu li {
   display: inline;
   list-style: none;
-  margin-right: 1.5rem;
+  margin-right: 1rem;
 }
 .nav-menu li a {
   text-decoration: none;
   font-size: 1.2rem;
 }
 
-.sec-title {
-  text-align: center;
-  margin: 2rem 0;
-}
-
 .container-icon-info {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: center;
 }
 .container-icon-info .icon-info {
   display: flex;
@@ -55,7 +50,8 @@
   position: relative;
 }
 .card-project .card-img {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .card-project .overlay {
   top: 0;
@@ -96,30 +92,22 @@
   align-items: center;
   background-color: rgba(0, 0, 0, 0.938);
   margin-top: 0;
-  padding: 1.3rem 0;
-  position: relative;
-}
-.nav-header .nav-menu {
-  padding: 0 3rem;
+  padding: 1rem 0;
 }
 .nav-header .nav-menu li a {
-  transition: 0.45s;
   color: rgb(232, 240, 240);
 }
 .nav-header .nav-menu li a:hover {
-  color: rgb(45, 170, 233);
+  color: rgb(8, 121, 121);
 }
 .nav-header .nav-alias {
-  font-size: 1.8rem;
-  color: rgb(48, 68, 248);
-  position: absolute;
-  left: 2rem;
+  font-size: 2rem;
+  color: azure;
+  justify-content: flex-start;
 }
 .nav-header .hamb {
   font-size: 2rem;
-  color: #f4f7f7;
-  position: absolute;
-  right: 2rem;
+  color: azure;
 }
 
 .sec-home {
@@ -134,21 +122,24 @@
   align-items: center;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.87);
-  color: #f4f7f7;
+  color: azure;
 }
 .sec-about .about {
   max-width: 60rem;
-  padding: 2rem;
+  padding: 4rem 2rem;
+}
+.sec-about .about .about-title {
+  text-align: center;
+  margin: 2rem 0;
 }
 .sec-about .about .about-info {
   font-size: 1rem;
-  padding: 0 1rem;
-  margin-bottom: 2rem;
 }
 .sec-about .about .about-data {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  padding: 1rem;
   gap: 1rem;
   flex-wrap: wrap;
 }
@@ -164,29 +155,28 @@
 }
 .sec-about .about .about-data .about-data-interests .about-interest-title {
   font-size: 1.7rem;
-  margin-bottom: 1rem;
-  text-align: center;
+  margin: 1rem 0;
 }
 .sec-about .about .about-data .about-data-interests .container-icon-info .icon-info {
   background-color: rgba(48, 46, 46, 0.87);
   transition: 0.3s;
 }
 .sec-about .about .about-data .about-data-interests .container-icon-info .icon-info:hover {
-  background-color: rgb(45, 170, 233);
+  background-color: rgb(8, 121, 121);
 }
 .sec-about .about .btn-cv {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3rem;
+  padding: 1.5rem;
 }
 .sec-about .about .btn-cv .btn-base {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #f4f7f7;
-  border: 1px solid #f4f7f7;
-  transition: 1s;
+  color: azure;
+  border: 1px solid azure;
+  transition: 0.3s;
   position: relative;
 }
 .sec-about .about .btn-cv .btn-base span {
@@ -199,8 +189,7 @@
   position: absolute;
 }
 .sec-about .about .btn-cv .btn-base:hover {
-  background-color: rgb(45, 170, 233);
-  transform: translateY(4px);
+  background-color: rgb(8, 121, 121);
 }
 .sec-about .about .btn-cv .btn-base:hover span {
   opacity: 0;
@@ -215,7 +204,7 @@
   align-items: center;
   min-height: 100vh;
   background-color: rgba(0, 0, 0, 0.822);
-  color: #f4f7f7;
+  color: azure;
   flex-direction: column;
   padding: 2rem 0;
 }
@@ -226,10 +215,10 @@
 .sec-skill .skill-data {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
 }
 .sec-skill .skill-data .technical-skills .skill-title {
   font-size: 1.3rem;
@@ -240,7 +229,7 @@
   transition: 0.3s;
 }
 .sec-skill .skill-data .technical-skills .container-icon-info .icon-info:hover {
-  background-color: rgb(45, 170, 233);
+  background-color: rgb(8, 121, 121);
 }
 .sec-skill .skill-data .professional-skills .skill-title {
   font-size: 1.3rem;
@@ -251,7 +240,7 @@
   transition: 0.3s;
 }
 .sec-skill .skill-data .professional-skills .container-icon-info .icon-info:hover {
-  background-color: rgb(45, 170, 233);
+  background-color: rgb(8, 121, 121);
 }
 
 .sec-projects {
@@ -259,10 +248,9 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  color: #f4f7f7;
   background-color: rgba(0, 0, 0, 0.87);
+  color: azure;
   flex-direction: column;
-  padding: 2rem;
 }
 .sec-projects .title-projects {
   margin-top: 4rem;
@@ -280,12 +268,12 @@
   background: linear-gradient(rgba(28, 21, 128, 0.911), rgba(8, 121, 121, 0.904));
 }
 .sec-projects .container-projects .card-project .overlay .btn-base {
-  color: #f4f7f7;
-  border: 1px solid #f4f7f7;
+  color: azure;
+  border: 1px solid azure;
   transition: 0.3s;
   padding: 0.4rem 2rem;
   font-size: 0.8rem;
-  color: #f4f7f7;
+  color: azure;
   text-decoration: none;
 }
 .sec-projects .container-projects .card-project .overlay .btn-base i {
@@ -294,152 +282,4 @@
 }
 .sec-projects .container-projects .card-project .overlay .btn-base:hover {
   background-color: rgba(28, 21, 128, 0.904);
-}
-
-.sec-contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  color: #f4f7f7;
-  flex-direction: column;
-  padding: 2rem 0;
-  background-color: rgb(0, 0, 0);
-  opacity: 0.9;
-  background-image: radial-gradient(#2d2d2d 1.3px, rgb(0, 0, 0) 1.3px);
-  background-size: 26px 26px;
-}
-.sec-contact .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sec-contact .container form {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  padding: 0.8rem;
-  gap: 1.5rem;
-}
-.sec-contact .container form .data-input {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-.sec-contact .container form .data-input label {
-  width: 49%;
-}
-.sec-contact .container form label {
-  display: flex;
-  flex-direction: column;
-}
-.sec-contact .container form label span {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 1.1rem;
-}
-.sec-contact .container form label input {
-  width: 100%;
-  padding: 1rem;
-  border: none;
-  border-radius: 0.3rem;
-  outline: none;
-  background-color: rgba(8, 8, 8, 0.966);
-  color: #f4f7f7;
-  font-size: 0.9rem;
-}
-.sec-contact .container form label textarea {
-  padding: 1rem;
-  border: none;
-  border-radius: 0.3rem;
-  outline: none;
-  background-color: rgba(8, 8, 8, 0.966);
-  color: #f4f7f7;
-  font-size: 0.9rem;
-}
-.sec-contact .container form .btn-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-.sec-contact .container form .btn-form .btn-base {
-  background-color: rgba(8, 8, 8, 0.966);
-  color: #f4f7f7;
-  border: none;
-  border: 1px solid #f4f7f7;
-}
-.sec-contact .container form .btn-form .btn-base:hover {
-  background-color: rgba(19, 18, 18, 0.966);
-}
-
-.sec-footer {
-  padding: 4rem 0;
-  background-color: rgb(0, 0, 0);
-}
-.sec-footer .redes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.sec-footer .redes a i {
-  font-size: 1.5rem;
-  color: #f4f7f7;
-  padding: 1rem;
-  border-radius: 50%;
-  border: 1px solid #f4f7f7;
-}
-
-@media (max-width: 820px) {
-  .nav-header {
-    padding: 1.5rem 0;
-  }
-  .nav-header .nav-menu {
-    justify-content: space-between;
-  }
-  .nav-header .nav-menu li a {
-    font-size: 1rem;
-  }
-  .nav-header .nav-alias {
-    font-size: 1.2rem;
-    left: 1.2rem;
-  }
-  .nav-header .hamb {
-    font-size: 1.5rem;
-  }
-  .sec-contact .container form .data-input label {
-    width: 100%;
-  }
-}
-@media (max-width: 575.98px) {
-  .sec-about .about .about-info {
-    font-size: 0.8rem;
-  }
-  .sec-about .about .about-data .about-data-contact .about-contact-title {
-    font-size: 1.2rem;
-  }
-  .sec-about .about .about-data .about-data-contact .about-contact {
-    font-size: 0.8rem;
-  }
-  .sec-about .about .about-data .about-data-interests .about-interest-title {
-    font-size: 1.2rem;
-  }
-  .sec-about .about .btn-cv .btn-base i {
-    font-size: 1.2rem;
-  }
-  .sec-projects .container-projects .card-project .overlay {
-    padding: 0.9rem;
-  }
-  .sec-projects .container-projects .card-project .overlay .overlay-title {
-    font-size: 0.9rem;
-  }
-  .sec-projects .container-projects .card-project .overlay .overlay-parrafo {
-    font-size: 0.6rem;
-  }
-  .sec-projects .container-projects .card-project .overlay .btn-base {
-    font-size: 0.7rem;
-  }
-}
-
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */
