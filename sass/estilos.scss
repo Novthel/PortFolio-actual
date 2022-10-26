@@ -2,6 +2,8 @@
 @use "mixin" as *;
 @use "variables" as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -16,19 +18,21 @@
     position: relative;
     .nav-menu {
         padding: 0 3rem;
+        left: 100%;
+        transition: left 0.9s;
         li{
             a{transition: .45s;
-
-                color: rgb(232, 240, 240);
+                color: $color-text-nav;
                 &:hover {
                     color: $color-hover; 
                 }
             }
         }
     }
+    
     .nav-alias {
         font-size: 1.8rem;
-        color:rgb(48, 68, 248) ;
+        color: $color-hover ;
         position: absolute;
         left: 2rem;
     }
@@ -37,13 +41,83 @@
         color: $color-text-dark;
         position: absolute;
         right: 2rem;
+        cursor: pointer;
+        &:hover {
+            color: $color-hover;
+        }
+    }
+    .responsive {
+        left: 50%;
     }
 }
 
 .sec-home {
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.938), rgba(0, 0, 0, 0.808)), url("../assets/img/programming.jpg");
+    @include flex(center , center);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.808)), url("../assets/img/programming.jpg");
     min-height: 100vh;
     background-size: cover;
+    padding: 2rem;
+    .home {
+        @include flex(center , center);
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        .img-home {
+            padding: 2rem 0 0 0;
+            border: 1px solid $color-hover;
+            border-radius: 50%;
+            filter: brightness(65%); 
+        }
+        .sec-info-home {
+            color: $color-text-dark;
+            .presentation {
+                p {
+                    font-size: 2rem;   
+                    span {
+                        display: block;
+                        font-size: 2.6rem; 
+                        color: $color-hover;
+                        font-weight: 400;
+                        white-space: nowrap;
+                        border-right: 0.15rem solid;
+                        width: 25rem;
+                        animation: typing 2.5s steps(12) infinite alternate, blink 0.5s infinite step-end alternate;
+                        overflow:hidden;
+                        }   
+                        @keyframes typing {
+                            from { width: 0}
+                        }
+                        
+                        @keyframes blink {
+                            0% { border-color: transparent}
+                        }  
+                }
+            }
+          
+            .redes {
+                margin: 2rem;
+                @include redes(1.2rem, 10%, 0.5rem, $color-text-dark, $color-hover);
+                box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	            transform: translatey(0px);
+                animation: float 4s ease-in-out infinite;
+                img { width: 100%; height: auto; }
+            }
+            @keyframes float {
+                0% {
+                    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                    transform: translatey(0px);
+                }
+                50% {
+                    box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+                    transform: translatey(-12px);
+                }
+                100% {
+                    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+                    transform: translatey(0px);
+                }
+            }
+        }
+    }
+   
 }
 
 .sec-about {
@@ -72,6 +146,9 @@
                 .about-contact {
                     list-style: none;
                     padding-left: 0;
+                    span {
+                        color: $color-hover;
+                    }
                 }
 
             }
@@ -83,13 +160,17 @@
                 }
                 .container-icon-info {
                     .icon-info {
+                        border-radius: 50%;
+                        width: 6rem;
+                        padding: 1.2rem 0;
                         background-color:  rgba(48, 46, 46, 0.87);
                         transition: .3s;
                         &:hover {
-                            background-color: $color-hover; 
+                            background-color: $color-hover;  
+                            color: $background-color-dark;    
                         }
                     }
-                    
+                   
                 }
             }
        }
@@ -100,27 +181,29 @@
             @include flex(center, center);
             color: $color-text-dark;
             border: 1px solid $color-text-dark ;
-            transition: 1s;
+            transition: 0.5s;
             position: relative;
+            text-decoration: none;
             span {
                 opacity: 1;
             }
             i {
-                font-weight: 700;
                 opacity: 0;
-                font-size: 1.5rem;
+                font-size: 2rem;
                 position: absolute; 
             }
             &:hover {
+                border-radius: 100%;
+                padding: 1.3rem 0;
                 background-color: $color-hover;
-                transform: translateY(4px);     
+                transform: translateY(2px);     
                 span {
                     opacity: 0;
                   
                 } 
                 i {
                     opacity: 1;
-                
+                    color: $color-text-dark;
                 }
             }
         }
@@ -154,9 +237,18 @@
             .container-icon-info {
                 .icon-info {
                     background-color: $background-icon-skill;
-                    transition: .3s;
+                    transition: all 1s;
                     &:hover {
                         background-color: $color-hover; 
+                        transform: rotateY(45deg);
+                        i {
+                            font-size: 3.2rem;
+                            margin-bottom: 0;
+                            color: $background-color-dark;
+                        }
+                        span {
+                            font-size: 0;
+                        }
                     }
                 }
                 
@@ -164,15 +256,26 @@
         }
         .professional-skills {
             .skill-title {
-                font-size: 1.3rem;
+                font-size: 1.2rem;
                 margin-bottom: 2rem;
             }
             .container-icon-info {
                 .icon-info {
                     background-color: $background-icon-skill;
-                    transition: .3s;
+                    transition: .9s;
                     &:hover {
                         background-color: $color-hover; 
+                        flex-direction: column-reverse;
+                        i {
+                            font-size: 1.2rem;
+                            margin-bottom: 0; 
+                        }
+                        span {
+                            color: $background-color-dark;
+                            font-weight: 700;
+                            font-size: 0.7rem;
+                            text-align: center;
+                        }
                     }
                 }
                 
@@ -271,12 +374,11 @@
                 @include flex(center, center);
                 padding: 1rem;
                 .btn-base {
-                    background-color:rgba(8, 8, 8, 0.966);
+                    background-color: $background-color-nav;
                     color: $color-text-dark;
-                    border: none;
                     border: 1px solid $color-text-dark;
-                    &:hover {
-                        background-color: rgba(19, 18, 18, 0.966); 
+                    i {
+                        margin-left: 0.5rem;
                     }
                 }
             }
@@ -290,18 +392,31 @@
     padding: 4rem 0;
     background-color: rgba(0,0,0,1);
     .redes {
-        @include flex(center, center);
-        gap: 1rem;
-        a {
-            i {
-                font-size: 1.5rem;
-                color: $color-text-dark;
-                padding: 1rem;
-                border-radius: 50%;
-                border: 1px solid $color-text-dark;
-            }
-        }
+        @include redes(1.5rem, 50%, 1rem, $color-text-dark, $color-hover);
     }
+}
+
+.msg-error {
+    font-size: 0.9rem;
+    padding: 0.4rem;
+    color: $color-text-dark;
+}
+
+.msg-succes {
+    text-align: center;
+    border: 1px solid rgb(19, 214, 117);
+    color: green;
+}
+
+.border-error {
+    border: 1px solid red;
+}
+.border-success {
+    border: 4px solid rgb(11, 235, 96);
+}
+
+.btn-disabled {
+    opacity: 50%;
 }
 
 
@@ -324,6 +439,23 @@
             font-size: 1.5rem;
         }
     }
+
+    .sec-home {
+        .home {
+            .sec-info-home {
+                .presentation {
+                    p {
+                        font-size: 1.1rem;
+                        span {
+                            font-size: 1.3rem;
+                            color: $color-hover;
+                        }
+                    }
+                }
+            }
+        }      
+    }
+
     .sec-contact {
         .container {
             form {
@@ -338,7 +470,60 @@
     }
 }
 
+@media (max-width: 767.98px) { 
+    .nav-header {
+        position: fixed;
+        height: 3rem;
+        top: 0;
+        min-width: 100%;
+        z-index: 1;
+        .nav-menu {
+            display: block;
+            position: fixed;
+            background-color: black;
+            text-align: center;
+            padding: 2rem;
+            top: 3rem;
+            min-height: 50vh;
+            z-index: 1;
+            right: 0;
+            margin-bottom: 1rem;
+
+            li{
+                display: block;
+                border-bottom: 1px solid $color-hover;
+                padding-left: 1rem 0;
+                margin-right: 0;
+                margin-bottom: 0.6rem;
+            }
+        }
+    }
+    .sec-title {
+        h2 {
+            font-size: 2rem;
+        }
+    }
+}
+
+
 @media (max-width: 575.98px) { 
+
+    .sec-home {
+        margin-top: 3rem;
+        .home {
+            .sec-info-home {
+                .presentation {
+                    p {
+                        span {
+                            width: 16rem;
+                            font-size: 2.3rem; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     .sec-about {
         .about {
            .about-info {
@@ -369,6 +554,7 @@
            }
         }
     }
+
     .sec-projects {
         .container-projects {
             .card-project {
@@ -389,4 +575,5 @@
             
         }
     }
+    
 }

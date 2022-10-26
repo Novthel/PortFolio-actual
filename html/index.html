@@ -16,31 +16,36 @@
         <div class="nav-alias">
             <strong>Novthel</strong>
         </div>
-        <ul class="nav-menu d-none d-md-block ">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#about">Acerca</a></li>
-            <li><a href="#skill">Habilidades</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-        </ul>
-        <div class="hamb d-md-none">
+            <ul class="nav-menu" id="nav">
+                <li><a href="#inicio" onclick="mostrarMenu()">Inicio</a></li>
+                <li><a href="#about" onclick="mostrarMenu()">Acerca</a></li>
+                <li><a href="#skill" onclick="mostrarMenu()">Habilidades</a></li>
+                <li><a href="#projects" onclick="mostrarMenu()">Proyectos</a></li>
+                <li><a href="#contact" onclick="mostrarMenu()">Contacto</a></li>
+            </ul>
+       
+        <div class="hamb d-md-none" id="hamb" onclick="mostrarMenu()">
             <i class="fa-solid fa-bars"></i>
         </div> 
     </header>
 
     <main>
         <section class="sec-home" id="inicio">
-            <div class="img-home">
-
-            </div>
-            <div class="sec-info-home">
-                <div class="title-home">
-
+            <div class="home">
+                <img class="img-home col-9 col-sm-4" src="../assets/img/PerfilCircular.png" alt="photo">
+                <div class="sec-info-home  col-8 col-sm-4">
+                    <div class="presentation">
+                        <p>Hola, Soy </p>
+                        <p><span>Oscar Novoa </span></p>
+                        <p>Desarrollador Front-end</p>
+                    </div>
+                    <div class="redes">
+                        <a href="https://github.com/Novthel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/oscarnovoaberthel/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/novthel01" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
                 </div>
-                <div class="info-home">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit
-                </div>
-            </div>
+            </div>p        
         </section>
 
         <section class="sec-about" id="about">
@@ -57,10 +62,10 @@
                     <div class="about-data-contact col-10 col-sm-5">
                         <h3 class="about-contact-title">Datos Personales</h3>
                         <ul class="about-contact">
-                            <li>Nacionalidad: Colombiano</li>
-                            <li>Telefono: +57 302-2865409</li>
-                            <li>Email: Novthel@live.com</li>
-                            <li>Ocupacion: Desarrollador Front-end</li>
+                            <li><span>Nacionalidad:</span> Colombiano</li> 
+                            <li><span>Telefono: </span>+57 302-2865409</li>
+                            <li><span>Email:</span> Novthel@live.com</li>
+                            <li><span>Ocupacion:</span> Desarrollador Front-end</li>
                         </ul>
                     </div>
                     <div class="about-data-interests col-10 col-sm-6">
@@ -96,7 +101,7 @@
                     </div>
                  </div>
                  <div class="btn-cv">
-                    <button class="btn-base"><span>Descarga CV</span> <i class="fa-solid fa-angles-down"></i></button>
+                    <a href="../assets/pdfDownload/pdf.pdf" class="btn-base" target="_blank"  rel="noopener noreferrer" download="CV.Oscar_Novoa.pdf"><span>Download</span> <i class="fa-solid fa-angles-down"></i></a>
                  </div>
             </div>
 
@@ -269,27 +274,28 @@
                 <h2>CONTACTO</h2>
             </div>
             <div class="container">
-                <form action="">
+                <form action="" id="formulario">
                     <div class="data-input">
                         <label for="name">
                             <span>Nombre</span>
-                            <input type="text" name="nombre">
+                            <input type="text" name="nombre" id="nombre">
                         </label>
                         <label for="email">
                             <span>Email</span>
-                            <input type="email" name="email">
+                            <input type="email" name="email" id="email">
                         </label>
                     </div>
                     <label for="tema">
                         <span>Tema</span>
-                        <input type="text" name="tema">
+                        <input type="text" name="tema" id="tema">
                     </label>
                     <label for="mensaje">
                         <span class="d-flex flex-start">Mensaje</span>
-                        <textarea type="text" name="mensaje"></textarea>
+                        <textarea type="text" name="mensaje" id="mensaje"></textarea>
                     </label>
+                    <div id="msj"></div>
                     <div class="btn-form">
-                        <button type="submit" class="btn-base">Enviar</button>
+                        <button type="submit" class="btn-base disabled" id="btn-enviar">Enviar  <i class="fa-solid fa-paper-plane"></i></button>
                     </div>
                     
                 </form>
@@ -300,15 +306,12 @@
     </main>
     <footer class="sec-footer">
         <div class="redes">
-            <a href="#"><i class="fa-brands fa-github"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-skype"></i></a>
-           
+            <a href="https://github.com/Novthel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/oscarnovoaberthel/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://twitter.com/novthel01" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-twitter"></i></a>
         </div>
 
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script> 
+    <script src="../js/script.js"></script>
 </body>
 </html>
