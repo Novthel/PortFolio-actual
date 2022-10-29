@@ -149,30 +149,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 3rem;
 }
 .sec-home .home .img-home {
-  padding: 2rem 0 0 0;
-  border: 1px solid rgb(7, 206, 23);
+  width: 15rem;
+  height: auto;
   border-radius: 50%;
-  filter: brightness(65%);
 }
 .sec-home .home .sec-info-home {
   color: #f4f7f7;
 }
+.sec-home .home .sec-info-home .presentation .greeting {
+  font-size: 1.4rem;
+}
 .sec-home .home .sec-info-home .presentation p {
-  font-size: 2rem;
+  font-size: 2.6rem;
+  margin-bottom: 0;
 }
 .sec-home .home .sec-info-home .presentation p span {
   display: block;
-  font-size: 2.6rem;
+  font-size: 3.2rem;
   color: rgb(7, 206, 23);
   font-weight: 400;
   white-space: nowrap;
   border-right: 0.15rem solid;
-  width: 25rem;
-  animation: typing 2.5s steps(12) infinite alternate, blink 0.5s infinite step-end alternate;
+  width: 23rem;
+  animation: typing 2.1s steps(14), blink 0.5s infinite step-end alternate;
   overflow: hidden;
 }
 @keyframes typing {
@@ -196,7 +200,7 @@
   animation: float 4s ease-in-out infinite;
 }
 .sec-home .home .sec-info-home .redes a i {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #f4f7f7;
   padding: 0.5rem;
   border-radius: 10%;
@@ -204,7 +208,7 @@
 }
 .sec-home .home .sec-info-home .redes a i:hover {
   color: rgb(7, 206, 23);
-  border: 2px solid rgb(7, 206, 23);
+  border: 1px solid rgb(7, 206, 23);
   transform: scale(1.1);
 }
 .sec-home .home .sec-info-home .redes img {
@@ -519,7 +523,7 @@
 }
 .sec-footer .redes a i:hover {
   color: rgb(7, 206, 23);
-  border: 2px solid rgb(7, 206, 23);
+  border: 1px solid rgb(7, 206, 23);
   transform: scale(1.1);
 }
 
@@ -564,12 +568,18 @@
   .nav-header .hamb {
     font-size: 1.5rem;
   }
+  .sec-home .home .img-home {
+    width: 13rem;
+  }
+  .sec-home .home .sec-info-home .presentation .greeting {
+    font-size: 1.3rem;
+  }
   .sec-home .home .sec-info-home .presentation p {
-    font-size: 1.1rem;
+    font-size: 2rem;
   }
   .sec-home .home .sec-info-home .presentation p span {
-    font-size: 1.3rem;
-    color: rgb(7, 206, 23);
+    font-size: 2.5rem;
+    width: 20rem;
   }
   .sec-contact .container form .data-input label {
     width: 100%;
@@ -607,12 +617,36 @@
   }
 }
 @media (max-width: 575.98px) {
-  .sec-home {
-    margin-top: 3rem;
+  .sec-home .home .img-home {
+    width: 9rem;
+  }
+  .sec-home .home .sec-info-home .presentation .greeting {
+    font-size: 1rem;
+  }
+  .sec-home .home .sec-info-home .presentation p {
+    font-size: 1.3rem;
   }
   .sec-home .home .sec-info-home .presentation p span {
-    width: 16rem;
-    font-size: 2.3rem;
+    font-size: 1.7rem;
+    width: 12rem;
+  }
+  .sec-home .home .sec-info-home .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .sec-home .home .sec-info-home .redes a i {
+    font-size: 0.7rem;
+    color: #f4f7f7;
+    padding: 0.5rem;
+    border-radius: 10%;
+    border: 1px solid #f4f7f7;
+  }
+  .sec-home .home .sec-info-home .redes a i:hover {
+    color: rgb(7, 206, 23);
+    border: 1px solid rgb(7, 206, 23);
+    transform: scale(1.1);
   }
   .sec-about .about .about-info {
     font-size: 0.8rem;

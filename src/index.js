@@ -1,3 +1,4 @@
+
 //variables
 const nav = document.querySelector('#nav');
 const formulario = document.querySelector('#formulario');
@@ -83,12 +84,12 @@ function enviarEmail(e) {
 }
 
 function resetFormulario(){
-    const bs = document.querySelectorAll('.border-success');
+    const bs = document.querySelectorAll('.border-success', 'border-error');
     if(bs){
-        inputEmail.classList.remove('border-success');
-        inputNombre.classList.remove('border-success');
-        inputTema.classList.remove('border-success');
-        inputMensaje.classList.remove('border-success');
+        inputEmail.classList.remove('border-success', 'border-error');
+        inputNombre.classList.remove('border-success', 'border-error');
+        inputTema.classList.remove('border-success', 'border-error');
+        inputMensaje.classList.remove('border-success', 'border-error');
     }
     formulario.reset();
     iniciarApp();
