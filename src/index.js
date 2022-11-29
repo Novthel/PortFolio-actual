@@ -33,6 +33,8 @@ function mostrarMensaje( mensaje, tipo) {
         msg.textContent= mensaje;
         if(tipo === 'error') {
             msg.classList.add('msg-error', 'old-msg');
+        }else{
+            msg.classList.add('msg-success', 'old-msg');
         }
         divMensaje.appendChild(msg);
         setTimeout(()=>{
@@ -78,9 +80,18 @@ function validarEmail(campo) {
 
 function enviarEmail(e) {
     e.preventDefault()
-    
-    resetFormulario();
-   
+
+    emailjs.sendForm('service_b2c5gcx', 'template_bbtrew6', e.target)
+    .then((result) => {
+        const resp = result.text;
+
+        if(resp === 'OK') {
+            mostrarMensaje('Correo Enviado Exitosamente', '')
+            resetFormulario();
+        }
+    }, (error) => {
+        console.log(error.text);
+    });
 }
 
 function resetFormulario(){

@@ -9,6 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../src/css/estilos.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init("rnFBGZ2Xa3aii-Ucw");
+    })();
+    </script>
 </head>
 <body>
     
@@ -274,10 +282,7 @@
                 <h2>CONTACTO</h2>
             </div>
             <div class="container">
-                <form action="" id="formulario" name="formulario-contact"
-                method="POST"
-                netlify-honeypot="bot-field"
-                data-netlify="true">
+                <form id="formulario" name="formulario-contact">
                     <div class="data-input">
                         <label for="name">
                             <span>Nombre</span>
@@ -298,7 +303,7 @@
                     </label>
                     <div id="msj"></div>
                     <div class="btn-form">
-                        <button type="submit" class="btn-base disabled" id="btn-enviar">Enviar  <i class="fa-solid fa-paper-plane"></i></button>
+                        <button type="submit" class="btn-base disabled" id="btn-enviar" >Enviar  <i class="fa-solid fa-paper-plane"></i></button>
                     </div>
                     
                 </form>

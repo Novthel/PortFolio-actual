@@ -410,10 +410,10 @@
     color: $color-text-dark;
 }
 
-.msg-succes {
+.msg-success {
     text-align: center;
     border: 1px solid rgb(19, 214, 117);
-    color: green;
+    color: $color-hover;
 }
 
 .border-error {
