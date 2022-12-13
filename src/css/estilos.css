@@ -17,10 +17,14 @@
 .sec-title {
   text-align: center;
   margin: 2rem 0;
+  color: rgb(6, 124, 16);
 }
 .sec-title h2 {
   font-size: 3rem;
-  color: rgb(6, 182, 20);
+  text-shadow: -5px -5px 1px rgb(1, 39, 13);
+}
+.sec-title h3 {
+  font-size: 2.8rem;
 }
 
 .container-icon-info {
@@ -38,6 +42,7 @@
   padding: 0.5rem;
   border: none;
   border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .container-icon-info .icon-info i {
   font-size: 2rem;
@@ -50,7 +55,6 @@
 .btn-base {
   background: none;
   padding: 0.4rem 2rem;
-  border-radius: 1rem;
   font-size: 1.1rem;
   font-weight: 700;
 }
@@ -58,9 +62,18 @@
 .card-project {
   width: 22rem;
   position: relative;
+  transition: all 0.5s ease-in-out;
 }
 .card-project .card-img {
   object-fit: contain;
+}
+.card-project .proyect-title {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  bottom: 0%;
+  position: absolute;
+  width: 100%;
 }
 .card-project .overlay {
   top: 0;
@@ -74,8 +87,6 @@
   height: 100%;
   opacity: 0;
   padding: 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.5s ease-in-out;
 }
 .card-project .overlay .overlay-title {
   font-size: 1.2rem;
@@ -84,8 +95,10 @@
   font-size: 0.7rem;
   padding: 1rem 0;
 }
-.card-project .overlay:hover {
-  transform: scale(1.02);
+.card-project:hover {
+  transform: translateY(-5px);
+}
+.card-project:hover .overlay {
   opacity: 1;
 }
 
@@ -114,11 +127,11 @@
   color: rgb(232, 240, 240);
 }
 .nav-header .nav-menu li a:hover {
-  color: rgb(7, 206, 23);
+  color: rgb(52, 224, 173);
 }
 .nav-header .nav-alias {
   font-size: 1.8rem;
-  color: rgb(7, 206, 23);
+  color: rgb(52, 224, 173);
   position: absolute;
   left: 2rem;
 }
@@ -130,7 +143,7 @@
   cursor: pointer;
 }
 .nav-header .hamb:hover {
-  color: rgb(7, 206, 23);
+  color: rgb(52, 224, 173);
 }
 .nav-header .responsive {
   left: 50%;
@@ -141,9 +154,11 @@
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.808)), url("../assets/img/programming.jpg");
-  min-height: 100vh;
+  min-height: 100%;
   background-size: cover;
   padding: 2rem;
+  width: 100%;
+  object-position: center center;
 }
 .sec-home .home {
   display: flex;
@@ -165,13 +180,13 @@
   font-size: 1.4rem;
 }
 .sec-home .home .sec-info-home .presentation p {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   margin-bottom: 0;
 }
 .sec-home .home .sec-info-home .presentation p span {
   display: block;
-  font-size: 3.2rem;
-  color: rgb(7, 206, 23);
+  font-size: 3.1rem;
+  color: rgb(52, 224, 173);
   font-weight: 400;
   white-space: nowrap;
   border-right: 0.15rem solid;
@@ -200,15 +215,15 @@
   animation: float 4s ease-in-out infinite;
 }
 .sec-home .home .sec-info-home .redes a i {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: #f4f7f7;
   padding: 0.5rem;
   border-radius: 10%;
   border: 1px solid #f4f7f7;
 }
 .sec-home .home .sec-info-home .redes a i:hover {
-  color: rgb(7, 206, 23);
-  border: 1px solid rgb(7, 206, 23);
+  color: rgb(52, 224, 173);
+  border: 1px solid rgb(52, 224, 173);
   transform: scale(1.1);
 }
 .sec-home .home .sec-info-home .redes img {
@@ -222,7 +237,7 @@
   }
   50% {
     box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
-    transform: translatey(-12px);
+    transform: translatey(-14px);
   }
   100% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
@@ -235,7 +250,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(36, 37, 41);
   color: #f4f7f7;
 }
 .sec-about .about {
@@ -265,7 +280,7 @@
   padding-left: 0;
 }
 .sec-about .about .about-data .about-data-contact .about-contact span {
-  color: rgb(7, 206, 23);
+  color: rgb(52, 224, 173);
 }
 .sec-about .about .about-data .about-data-interests .about-interest-title {
   font-size: 1.7rem;
@@ -280,8 +295,8 @@
   transition: 0.3s;
 }
 .sec-about .about .about-data .about-data-interests .container-icon-info .icon-info:hover {
-  background-color: rgb(7, 206, 23);
-  color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(3, 139, 133);
+  color: rgb(36, 37, 41);
 }
 .sec-about .about .btn-cv {
   display: flex;
@@ -290,34 +305,35 @@
   padding-top: 3rem;
 }
 .sec-about .about .btn-cv .btn-base {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  font-size: 1.3rem;
+  text-decoration: none;
   color: #f4f7f7;
   border: 1px solid #f4f7f7;
-  transition: 0.5s;
-  position: relative;
-  text-decoration: none;
 }
-.sec-about .about .btn-cv .btn-base span {
-  opacity: 1;
-}
-.sec-about .about .btn-cv .btn-base i {
-  opacity: 0;
-  font-size: 2rem;
+.sec-about .about .btn-cv .btn-base::before {
+  content: " ";
+  display: block;
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: rgb(52, 224, 173);
+  transition: transform 0.8s ease;
+  transform: scaleX(0);
+  transform-origin: bottom right;
 }
 .sec-about .about .btn-cv .btn-base:hover {
-  border-radius: 100%;
-  padding: 1.3rem 0;
-  background-color: rgb(7, 206, 23);
-  transform: translateY(2px);
+  color: rgb(52, 224, 173);
+  border: 1px solid rgb(52, 224, 173);
 }
-.sec-about .about .btn-cv .btn-base:hover span {
-  opacity: 0;
+.sec-about .about .btn-cv .btn-base:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
-.sec-about .about .btn-cv .btn-base:hover i {
-  opacity: 1;
+.sec-about .about .btn-cv i {
   color: #f4f7f7;
 }
 
@@ -326,7 +342,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: rgba(0, 0, 0, 0.822);
+  background-color: rgba(36, 37, 41, 0.986);
   color: #f4f7f7;
   flex-direction: column;
   padding: 2rem 0;
@@ -349,16 +365,16 @@
 }
 .sec-skill .skill-data .technical-skills .container-icon-info .icon-info {
   background-color: rgba(87, 86, 86, 0.966);
-  transition: all 1s;
+  transition: transform 1s;
 }
 .sec-skill .skill-data .technical-skills .container-icon-info .icon-info:hover {
-  background-color: rgb(7, 206, 23);
-  transform: rotateY(45deg);
+  background-color: rgb(3, 139, 133);
+  transform: translateY(-5px);
+  color: rgb(36, 37, 41);
 }
 .sec-skill .skill-data .technical-skills .container-icon-info .icon-info:hover i {
   font-size: 3.2rem;
   margin-bottom: 0;
-  color: rgba(0, 0, 0, 0.87);
 }
 .sec-skill .skill-data .technical-skills .container-icon-info .icon-info:hover span {
   font-size: 0;
@@ -372,18 +388,9 @@
   transition: 0.9s;
 }
 .sec-skill .skill-data .professional-skills .container-icon-info .icon-info:hover {
-  background-color: rgb(7, 206, 23);
-  flex-direction: column-reverse;
-}
-.sec-skill .skill-data .professional-skills .container-icon-info .icon-info:hover i {
-  font-size: 1.2rem;
-  margin-bottom: 0;
-}
-.sec-skill .skill-data .professional-skills .container-icon-info .icon-info:hover span {
-  color: rgba(0, 0, 0, 0.87);
-  font-weight: 700;
-  font-size: 0.7rem;
-  text-align: center;
+  background-color: rgb(3, 139, 133);
+  color: rgb(36, 37, 41);
+  scale: 1.05;
 }
 
 .sec-projects {
@@ -392,7 +399,7 @@
   align-items: center;
   min-height: 100vh;
   color: #f4f7f7;
-  background-color: rgba(0, 0, 0, 0.87);
+  background-color: rgb(36, 37, 41);
   flex-direction: column;
   padding: 2rem;
 }
@@ -408,8 +415,16 @@
   flex-wrap: wrap;
   gap: 2rem;
 }
+.sec-projects .container-projects .card-project {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.sec-projects .container-projects .card-project .proyect-title {
+  background-color: rgba(4, 63, 6, 0.95);
+  color: rgb(52, 224, 173);
+  font-size: 1rem;
+}
 .sec-projects .container-projects .card-project .overlay {
-  background: linear-gradient(rgba(28, 21, 128, 0.911), rgba(8, 121, 121, 0.904));
+  background: linear-gradient(rgb(0, 70, 67), rgb(3, 139, 133));
 }
 .sec-projects .container-projects .card-project .overlay .btn-base {
   color: #f4f7f7;
@@ -425,7 +440,7 @@
   margin-left: 0.5rem;
 }
 .sec-projects .container-projects .card-project .overlay .btn-base:hover {
-  background-color: rgba(28, 21, 128, 0.904);
+  background-color: rgb(0, 70, 67);
 }
 
 .sec-contact {
@@ -522,8 +537,8 @@
   border: 1px solid #f4f7f7;
 }
 .sec-footer .redes a i:hover {
-  color: rgb(7, 206, 23);
-  border: 1px solid rgb(7, 206, 23);
+  color: rgb(52, 224, 173);
+  border: 1px solid rgb(52, 224, 173);
   transform: scale(1.1);
 }
 
@@ -533,10 +548,10 @@
   color: #f4f7f7;
 }
 
-.msg-succes {
+.msg-success {
   text-align: center;
   border: 1px solid rgb(19, 214, 117);
-  color: green;
+  color: rgb(52, 224, 173);
 }
 
 .border-error {
@@ -607,7 +622,7 @@
   }
   .nav-header .nav-menu li {
     display: block;
-    border-bottom: 1px solid rgb(7, 206, 23);
+    border-bottom: 1px solid rgb(52, 224, 173);
     padding-left: 1rem 0;
     margin-right: 0;
     margin-bottom: 0.6rem;
@@ -615,19 +630,22 @@
   .sec-title h2 {
     font-size: 2rem;
   }
+  .sec-title h3 {
+    font-size: 1.8rem;
+  }
 }
 @media (max-width: 575.98px) {
   .sec-home .home .img-home {
     width: 9rem;
   }
   .sec-home .home .sec-info-home .presentation .greeting {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .sec-home .home .sec-info-home .presentation p {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .sec-home .home .sec-info-home .presentation p span {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     width: 12rem;
   }
   .sec-home .home .sec-info-home .redes {
@@ -644,8 +662,8 @@
     border: 1px solid #f4f7f7;
   }
   .sec-home .home .sec-info-home .redes a i:hover {
-    color: rgb(7, 206, 23);
-    border: 1px solid rgb(7, 206, 23);
+    color: rgb(52, 224, 173);
+    border: 1px solid rgb(52, 224, 173);
     transform: scale(1.1);
   }
   .sec-about .about .about-info {
@@ -663,17 +681,17 @@
   .sec-about .about .btn-cv .btn-base i {
     font-size: 1.2rem;
   }
+  .sec-projects .container-projects .card-project .proyect-title {
+    font-size: 0.8rem;
+  }
   .sec-projects .container-projects .card-project .overlay {
     padding: 0.9rem;
-  }
-  .sec-projects .container-projects .card-project .overlay .overlay-title {
-    font-size: 0.9rem;
   }
   .sec-projects .container-projects .card-project .overlay .overlay-parrafo {
     font-size: 0.6rem;
   }
   .sec-projects .container-projects .card-project .overlay .btn-base {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
 }
 

@@ -9,6 +9,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../src/css/estilos.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
     </script>
@@ -40,12 +43,12 @@
     <main>
         <section class="sec-home" id="inicio">
             <div class="home">
-                <img class="img-home " src="../src/assets/img/fotoPerfilCircular.png" alt="photo">
+                <img class="img-home animate__animated animate__zoomIn" src="../src/assets/img/fotoPerfilCircular.png" alt="photo">
                 <div class="sec-info-home col-10 col-md-12">
                     <div class="presentation">
-                        <p class="greeting">Hola, Soy </p>
-                        <p><span>Oscar Novoa </span></p>
-                        <p>Desarrollador Front-end/ ReactJs</p>
+                        <p class="greeting animate__animated animate__fadeIn">Hola, Soy </p>
+                        <p class="animate__animated animate__fadeIn"><span>Oscar Novoa </span></p>
+                        <p class="animate__animated animate__zoomInDown animate__slower">Desarrollador Front-end/ ReactJs</p>
                     </div>
                     <div class="redes">
                         <a href="https://github.com/Novthel" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
@@ -62,7 +65,7 @@
                     <h2>SOBRE MI</h2>
                 </div>
                 <p class="about-info"> Soy un apasionado por el mundo de la tecnología en especial la programación. Ingeniero en Electrónica y Desarrollador web en continua formacion. <br/> 
-                    Con conocimientos en el desarrollo de páginas web con HTML5, CSS3 - SASS así como manejo de lenguajes de programación JavaScript,
+                    Con experiencia en el desarrollo de páginas web con HTML5, CSS3 - SASS así como manejo de lenguajes de programación JavaScript,
                     Python, librería ReactJs, base de datos MySQL y MongoDB.<br/> 
                     Proactivo, autodidacta con excelente disposición para el aprendizaje y con experiencia en trabajo en equipo mediante metodología SCRUM.
                  </p>
@@ -109,7 +112,7 @@
                     </div>
                  </div>
                  <div class="btn-cv">
-                    <a href="../src/assets/pdfDownload/pdf.pdf" class="btn-base" target="_blank"  rel="noopener noreferrer" download="CV.Oscar_Novoa.pdf"><span>Download</span> <i class="fa-solid fa-angles-down"></i></a>
+                    <a href="../src/assets/pdfDownload/pdf.pdf" class="btn-base" target="_blank"  rel="noopener noreferrer" download="CV.Oscar_Novoa.pdf"><span>Download</span> </a>
                  </div>
             </div>
 
@@ -206,16 +209,17 @@
             <div class="container-projects">
                 <div class="card-project">
                     <img class="card-img" src="../src/assets/img/panaderia.jpg" alt="img-panaderia"> 
+                    <h4 class="proyect-title">
+                        PANADERIA-NOVTHEL
+                    </h4>
                     <div class="overlay">
-                        <h4 class="overlay-title">
-                            PANADERIA-WEB
-                        </h4>
                         <p class="overlay-parrafo">
-                            Elaborada con ReactJS, SASS, Bootstrap5. <br>
-                            APP de Gestion de pedidos de una panaderia on-line. <br>
-                            EN DESARROLLO ...  <i class="fa-solid fa-person-digging"></i>
+                            Proyecto Web para la promocion de productos y contacto con los clientes de la Panaderia-Novthel.<br> 
+                            Esta elaborado en Front-end con libreria ReactJS, SASS, Bootstrap5 y en Backend con Firebase. <br>
+                            El proyecto abarca la gestion de usuarios y productos, rutas protegidas, autenticacion de usuarios, comunicacion con clientes<br>
+                            EN MEJORAMIENTO CONTINUO ...  <i class="fa-solid fa-person-digging"></i>
                         </p>
-                        <a href="https://novthel-panaderia-web.netlify.app/" class="btn-base"
+                        <a href="https://panaderia-web.web.app/" class="btn-base"
                         target="_blank" rel="noreferrer noopener" >
                             Website <i class="fa-solid fa-arrow-right-to-bracket"></i>
                         </a>
@@ -224,13 +228,15 @@
 
                 <div class="card-project">
                     <img class="card-img" src="../src/assets/img/cine.jpg" alt="img-cine">
+                    <h4 class="proyect-title">
+                        BUSCADOR DE PELICULAS
+                    </h4>
                     <div class="overlay">
-                        <h4 class="overlay-title">
-                            BUSCADOR DE PELICULAS
-                        </h4>
                         <p class="overlay-parrafo">
+                            Proyecto Web para visualizar informacion de nuetras peliculas favoritas <br>
                             Elaborado en ReactJS - CSS Modules. <br>
-                            APP de busqueda de Peliculas Consultando la API TMDb
+                            Esta APP de busqueda de Peliculas abarca la consulta de la API TMDb, 
+                            filtrado de peliculas por Puntuacion del publico y Busqueda por Titulo.
                         </p>
                         <a href="https://cinema-novthel.netlify.app/" class="btn-base"
                         target="_blank" rel="noreferrer noopener" >
@@ -241,13 +247,13 @@
 
                 <div class="card-project">
                     <img class="card-img" src="../src/assets/img/engineer.jpg" alt="img-engineer">
+                    <h4 class="proyect-title">
+                        SOFTWARE DE CHEQUEO DE MANTENIMIENTO
+                    </h4>
                     <div class="overlay">
-                        <h4 class="overlay-title">
-                            SOFTWARE DE CHEQUEO DE MANTENIMIENTO
-                        </h4>
                         <p class="overlay-parrafo">
-                                Elaborada en ReactJS -Redux-Toolkit - SASS - Bootstrap5. <br>
                                 APP de control de las diferentes labores de mantenimiento de una empresa. <br>
+                                Elaborada en ReactJS -Redux-Toolkit - SASS - Bootstrap5. <br>
                                 EN DESARROLLO ...  <i class="fa-solid fa-person-digging"></i>
                         </p>
                         <a href="https://novthel-maintenance-software.netlify.app/" class="btn-base"
@@ -259,10 +265,10 @@
 
                 <div class="card-project">
                     <img class="card-img" src="../src/assets/img/landing-page.jpg" alt="img-landing-page">
+                    <h4 class="proyect-title">
+                        LANDING PAGE COINBASE
+                    </h4>
                     <div class="overlay">
-                        <h4 class="overlay-title">
-                            LANDING PAGE COINBASE
-                        </h4>
                         <p class="overlay-parrafo">
                             Elaborada en JavaScript, SASS, Bootstrap5
                         </p>
@@ -279,7 +285,7 @@
 
         <section class="sec-contact" id="contact">
             <div class="sec-title">
-                <h2>CONTACTO</h2>
+                <h3>CONTACTO</h3>
             </div>
             <div class="container">
                 <form id="formulario" name="formulario-contact">
