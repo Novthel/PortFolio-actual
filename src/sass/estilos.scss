@@ -55,56 +55,81 @@
 .sec-home {
     @include flex(center , center);
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.808)), url("../assets/img/programming.jpg");
-    min-height: 100%;
+    min-height: 100vh;
     background-size: cover;
     padding: 2rem;
     width: 100%;
     object-position: center center;
     .home {
         @include flex(center , center);
-        flex-direction: column;
-        gap: 2rem;
-        padding-top: 3rem;
-        .img-home {
-            width: 15rem;
-            height: auto;
-            border-radius: 50%;
-        }
+        gap: 1rem;
+        width: 100%;
         .sec-info-home {
             color: $color-text-dark;
-            .presentation {
-                .greeting {
-                    font-size: 1.4rem;  
-                }
-                p {
-                    font-size: 2.3rem;  
-                    margin-bottom: 0; 
+           
+            .presentation{
+                display: block;
+                p{
+                    font-size: 3rem;
+                    margin-bottom: 0;
+                    font-weight: bold;
                     span {
-                        display: block;
-                        font-size: 3.1rem; 
-                        color: $color-hover;
-                        font-weight: 400;
-                        white-space: nowrap;
-                        border-right: 0.15rem solid;
-                        width: 23rem;
-                        animation: typing 2.1s steps(14), blink 0.5s infinite step-end alternate;
-                        overflow:hidden;
-                        }   
-                        @keyframes typing {
-                            from { width: 0}
-                        }
-                        
-                        @keyframes blink {
-                            0% { border-color: transparent}
-                        }  
+                        color: $color-hover; 
+                    }
                 }
+                .greeting{
+                    display: inline-block;
+                    .typed-welcome{
+                        overflow: hidden;
+                        border-right: 0.18rem solid $color-hover;
+                        padding-right: 5px;
+                        font-size: 1.5rem;
+                        width: 0;
+                        white-space: nowrap;
+                        animation: typing 2s steps(20, end) forwards, blink 1.5s infinite;  
+                    }
+                    .typed-office{
+                        animation: typing 3s steps(25, end) forwards, blink 1.5s infinite;
+                        animation-delay: 3s;
+                    }
+                   
+                }
+                @keyframes typing{
+                    from{
+                        width: 0;
+                    }
+                    to{
+                        width: 100%;
+                    }
+                }
+                
+                @keyframes blink{
+                    from { 
+                        border-color: transparent 
+                    }
+                    to {
+                        border-color: $color-hover; 
+                    }
+                }
+                
             }
+               
           
+            
+        }
+        .sec-img-home {
+            @include flex(center , center);
+            flex-direction: column;
+            .img-home {
+                width: 13rem;
+                height: auto;
+                border-radius: 50%;
+            }
             .redes {
                 margin: 2rem;
                 @include redes(1.3rem, 10%, 0.5rem, $color-text-dark, $color-hover);
                 box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-	            transform: translatey(0px);
+                transform: translatey(0px);
                 animation: float 4s ease-in-out infinite;
                 img { width: 100%; height: auto; }
             }
@@ -123,6 +148,7 @@
                 }
             }
         }
+        
     }
    
 }
@@ -170,12 +196,9 @@
                         border-radius: 50%;
                         width: 6rem;
                         padding: 1.2rem 0;
-                        background-color:  rgba(48, 46, 46, 0.87);
-                        transition: .3s;
-                        &:hover {
-                            background-color: $color-hover-icons;  
-                            color: $background-color-dark;    
-                        }
+                        background-color: $color-hover-icons;  
+                        color: $background-color-dark; 
+                        box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
                     }
                    
                 }
@@ -449,24 +472,27 @@
 
     .sec-home {
         .home {
-            .img-home {
-                width: 13rem;
-            }
             .sec-info-home {
-                .presentation {
-                    .greeting {
-                        font-size: 1.3rem;  
+                .presentation{
+                    p{
+                        font-size: 2rem;
                     }
-                    p {
-                        font-size: 2rem;  
-                        span {
-                            font-size: 2.5rem;
-                            width: 20rem;
-                        }
-                    }
+                    .greeting{
+                        .typed-welcome{
+                            font-size: 1.2rem;
+                        }   
+                    }      
+                } 
+            }
+            .sec-img-home {
+                .img-home {
+                    width: 9rem;
+                }
+                .redes {
+                    @include redes(1rem, 10%, 0.5rem, $color-text-dark, $color-hover);
                 }
             }
-        }      
+        }  
     }
 
     .sec-contact {
@@ -511,6 +537,32 @@
             }
         }
     }
+    .sec-home {
+        .home {
+            gap: 3rem;
+            .sec-info-home {
+                width: 40%;
+                .presentation{
+                    p{
+                        font-size: 2rem;
+                    }
+                    .greeting{
+                        .typed-welcome{
+                            font-size: 1.2rem;
+                        }   
+                    }      
+                }   
+            }
+            .sec-img-home {
+                .img-home {
+                    width: 9rem;
+                }
+                .redes {
+                    @include redes(1rem, 10%, 0.5rem, $color-text-dark, $color-hover);
+                }
+            }
+        }  
+    }
     .sec-title {
         h2 {
             font-size: 2rem;
@@ -522,32 +574,34 @@
 }
 
 
-@media (max-width: 575.98px) { 
+@media (max-width: 576.98px) { 
 
     .sec-home {
         .home {
-            .img-home {
-                width: 9rem;
-            }
+            gap: 3rem;
+            flex-direction: column-reverse;
             .sec-info-home {
-                .presentation {
-                    .greeting {
-                        font-size: 0.8rem;  
+                .presentation{
+                    p{
+                        font-size: 1.5rem;
                     }
-                    p {
-                        font-size: 1.2rem;  
-                        span {
-                            font-size: 1.6rem;
-                            width: 12rem;
-                        }
-                    }
+                    .greeting{
+                        .typed-welcome{
+                            font-size: 0.9rem;
+                        }   
+                    }      
+                }   
+            }
+            .sec-img-home {
+                .img-home {
+                    margin-top: 3rem;
+                    width: 9rem;
                 }
                 .redes {
-                    @include redes(0.7rem, 10%, 0.5rem, $color-text-dark, $color-hover);
+                    display: none;
                 }
             }
-           
-        }      
+        }  
     }
 
     .sec-about {
@@ -602,5 +656,37 @@
         }
     }
     
+}
+
+@media (max-width: 365.98px) { 
+
+    .sec-home {
+        .home {
+            gap: 2rem;
+            flex-direction: column-reverse;
+            .sec-info-home {
+                width: 60%;
+                .presentation{
+                    p{
+                        font-size: 1.5rem;
+                    }
+                    .greeting{
+                        .typed-welcome{
+                            font-size: 0.9rem;
+                        }   
+                    }      
+                }   
+            }
+            .sec-img-home {
+                .img-home {
+                    width: 9rem;
+                }
+                .redes {
+                    display: none;
+                }
+            }
+        }  
+    }
+
 }
 

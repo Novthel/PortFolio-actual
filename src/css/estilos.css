@@ -21,7 +21,8 @@
 }
 .sec-title h2 {
   font-size: 3rem;
-  text-shadow: -5px -5px 1px rgb(1, 39, 13);
+  font-weight: bold;
+  text-shadow: -3px -1px 1px rgb(1, 39, 13);
 }
 .sec-title h3 {
   font-size: 2.8rem;
@@ -94,6 +95,7 @@
 .card-project .overlay .overlay-parrafo {
   font-size: 0.7rem;
   padding: 1rem 0;
+  margin-bottom: 0;
 }
 .card-project:hover {
   transform: translateY(-5px);
@@ -154,7 +156,7 @@
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.945), rgba(0, 0, 0, 0.808)), url("../assets/img/programming.jpg");
-  min-height: 100%;
+  min-height: 100vh;
   background-size: cover;
   padding: 2rem;
   width: 100%;
@@ -164,47 +166,67 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 2rem;
-  padding-top: 3rem;
-}
-.sec-home .home .img-home {
-  width: 15rem;
-  height: auto;
-  border-radius: 50%;
+  gap: 1rem;
+  width: 100%;
 }
 .sec-home .home .sec-info-home {
   color: #f4f7f7;
 }
-.sec-home .home .sec-info-home .presentation .greeting {
-  font-size: 1.4rem;
+.sec-home .home .sec-info-home .presentation {
+  display: block;
 }
 .sec-home .home .sec-info-home .presentation p {
-  font-size: 2.3rem;
+  font-size: 3rem;
   margin-bottom: 0;
+  font-weight: bold;
 }
 .sec-home .home .sec-info-home .presentation p span {
-  display: block;
-  font-size: 3.1rem;
   color: rgb(52, 224, 173);
-  font-weight: 400;
-  white-space: nowrap;
-  border-right: 0.15rem solid;
-  width: 23rem;
-  animation: typing 2.1s steps(14), blink 0.5s infinite step-end alternate;
+}
+.sec-home .home .sec-info-home .presentation .greeting {
+  display: inline-block;
+}
+.sec-home .home .sec-info-home .presentation .greeting .typed-welcome {
   overflow: hidden;
+  border-right: 0.18rem solid rgb(52, 224, 173);
+  padding-right: 5px;
+  font-size: 1.5rem;
+  width: 0;
+  white-space: nowrap;
+  animation: typing 2s steps(20, end) forwards, blink 1.5s infinite;
+}
+.sec-home .home .sec-info-home .presentation .greeting .typed-office {
+  animation: typing 3s steps(25, end) forwards, blink 1.5s infinite;
+  animation-delay: 3s;
 }
 @keyframes typing {
   from {
     width: 0;
   }
-}
-@keyframes blink {
-  0% {
-    border-color: transparent;
+  to {
+    width: 100%;
   }
 }
-.sec-home .home .sec-info-home .redes {
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: rgb(52, 224, 173);
+  }
+}
+.sec-home .home .sec-img-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sec-home .home .sec-img-home .img-home {
+  width: 13rem;
+  height: auto;
+  border-radius: 50%;
+}
+.sec-home .home .sec-img-home .redes {
   margin: 2rem;
   display: flex;
   justify-content: center;
@@ -214,19 +236,19 @@
   transform: translatey(0px);
   animation: float 4s ease-in-out infinite;
 }
-.sec-home .home .sec-info-home .redes a i {
+.sec-home .home .sec-img-home .redes a i {
   font-size: 1.3rem;
   color: #f4f7f7;
   padding: 0.5rem;
   border-radius: 10%;
   border: 1px solid #f4f7f7;
 }
-.sec-home .home .sec-info-home .redes a i:hover {
+.sec-home .home .sec-img-home .redes a i:hover {
   color: rgb(52, 224, 173);
   border: 1px solid rgb(52, 224, 173);
   transform: scale(1.1);
 }
-.sec-home .home .sec-info-home .redes img {
+.sec-home .home .sec-img-home .redes img {
   width: 100%;
   height: auto;
 }
@@ -291,12 +313,9 @@
   border-radius: 50%;
   width: 6rem;
   padding: 1.2rem 0;
-  background-color: rgba(48, 46, 46, 0.87);
-  transition: 0.3s;
-}
-.sec-about .about .about-data .about-data-interests .container-icon-info .icon-info:hover {
   background-color: rgb(3, 139, 133);
   color: rgb(36, 37, 41);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 .sec-about .about .btn-cv {
   display: flex;
@@ -583,18 +602,32 @@
   .nav-header .hamb {
     font-size: 1.5rem;
   }
-  .sec-home .home .img-home {
-    width: 13rem;
-  }
-  .sec-home .home .sec-info-home .presentation .greeting {
-    font-size: 1.3rem;
-  }
   .sec-home .home .sec-info-home .presentation p {
     font-size: 2rem;
   }
-  .sec-home .home .sec-info-home .presentation p span {
-    font-size: 2.5rem;
-    width: 20rem;
+  .sec-home .home .sec-info-home .presentation .greeting .typed-welcome {
+    font-size: 1.2rem;
+  }
+  .sec-home .home .sec-img-home .img-home {
+    width: 9rem;
+  }
+  .sec-home .home .sec-img-home .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .sec-home .home .sec-img-home .redes a i {
+    font-size: 1rem;
+    color: #f4f7f7;
+    padding: 0.5rem;
+    border-radius: 10%;
+    border: 1px solid #f4f7f7;
+  }
+  .sec-home .home .sec-img-home .redes a i:hover {
+    color: rgb(52, 224, 173);
+    border: 1px solid rgb(52, 224, 173);
+    transform: scale(1.1);
   }
   .sec-contact .container form .data-input label {
     width: 100%;
@@ -627,6 +660,39 @@
     margin-right: 0;
     margin-bottom: 0.6rem;
   }
+  .sec-home .home {
+    gap: 3rem;
+  }
+  .sec-home .home .sec-info-home {
+    width: 40%;
+  }
+  .sec-home .home .sec-info-home .presentation p {
+    font-size: 2rem;
+  }
+  .sec-home .home .sec-info-home .presentation .greeting .typed-welcome {
+    font-size: 1.2rem;
+  }
+  .sec-home .home .sec-img-home .img-home {
+    width: 9rem;
+  }
+  .sec-home .home .sec-img-home .redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .sec-home .home .sec-img-home .redes a i {
+    font-size: 1rem;
+    color: #f4f7f7;
+    padding: 0.5rem;
+    border-radius: 10%;
+    border: 1px solid #f4f7f7;
+  }
+  .sec-home .home .sec-img-home .redes a i:hover {
+    color: rgb(52, 224, 173);
+    border: 1px solid rgb(52, 224, 173);
+    transform: scale(1.1);
+  }
   .sec-title h2 {
     font-size: 2rem;
   }
@@ -634,37 +700,23 @@
     font-size: 1.8rem;
   }
 }
-@media (max-width: 575.98px) {
-  .sec-home .home .img-home {
-    width: 9rem;
-  }
-  .sec-home .home .sec-info-home .presentation .greeting {
-    font-size: 0.8rem;
+@media (max-width: 576.98px) {
+  .sec-home .home {
+    gap: 3rem;
+    flex-direction: column-reverse;
   }
   .sec-home .home .sec-info-home .presentation p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
   }
-  .sec-home .home .sec-info-home .presentation p span {
-    font-size: 1.6rem;
-    width: 12rem;
+  .sec-home .home .sec-info-home .presentation .greeting .typed-welcome {
+    font-size: 0.9rem;
   }
-  .sec-home .home .sec-info-home .redes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
+  .sec-home .home .sec-img-home .img-home {
+    margin-top: 3rem;
+    width: 9rem;
   }
-  .sec-home .home .sec-info-home .redes a i {
-    font-size: 0.7rem;
-    color: #f4f7f7;
-    padding: 0.5rem;
-    border-radius: 10%;
-    border: 1px solid #f4f7f7;
-  }
-  .sec-home .home .sec-info-home .redes a i:hover {
-    color: rgb(52, 224, 173);
-    border: 1px solid rgb(52, 224, 173);
-    transform: scale(1.1);
+  .sec-home .home .sec-img-home .redes {
+    display: none;
   }
   .sec-about .about .about-info {
     font-size: 0.8rem;
@@ -692,6 +744,27 @@
   }
   .sec-projects .container-projects .card-project .overlay .btn-base {
     font-size: 0.6rem;
+  }
+}
+@media (max-width: 365.98px) {
+  .sec-home .home {
+    gap: 2rem;
+    flex-direction: column-reverse;
+  }
+  .sec-home .home .sec-info-home {
+    width: 60%;
+  }
+  .sec-home .home .sec-info-home .presentation p {
+    font-size: 1.5rem;
+  }
+  .sec-home .home .sec-info-home .presentation .greeting .typed-welcome {
+    font-size: 0.9rem;
+  }
+  .sec-home .home .sec-img-home .img-home {
+    width: 9rem;
+  }
+  .sec-home .home .sec-img-home .redes {
+    display: none;
   }
 }
 
