@@ -198,7 +198,7 @@
                         width: 6rem;
                         padding: 1.2rem 0;
                         background-color: $color-hover-icons;  
-                        color: $background-color-dark; 
+                        color: $color-text-dark; 
                         box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
                     }
                    
@@ -268,12 +268,10 @@
             }
             .container-icon-info {
                 .icon-info {
-                    background-color: $background-icon-skill;
+                    background-color: transparent;
                     transition: transform 1s;
                     &:hover {
-                        background-color: $color-hover-icons; 
                         transform: translateY(-5px);
-                        color: $background-color-dark; 
                         i {
                             font-size: 3.2rem;
                             margin-bottom: 0;
@@ -288,16 +286,14 @@
         }
         .professional-skills {
             .skill-title {
-                font-size: 1.2rem;
+                font-size: 1.3rem;
                 margin-bottom: 2rem;
             }
             .container-icon-info {
                 .icon-info {
-                    background-color: $background-icon-skill;
+                    background-color: transparent;
                     transition: .9s;
                     &:hover {
-                        background-color: $color-hover-icons;
-                        color: $background-color-dark; 
                         scale: 1.05;
                     }
                 }
@@ -332,7 +328,7 @@
                 font-size: 1rem;
             }
             .overlay {
-                background: linear-gradient(rgb(0,70,67), rgb(3, 139, 133));
+                background: linear-gradient(rgba(0, 70, 67, 0.589), rgb(3, 139, 133));
                 .btn-base {
                     color: $color-text-dark;
                     border: 1px solid $color-text-dark ;
@@ -346,7 +342,7 @@
                         margin-left: 0.5rem;
                     }
                     &:hover {
-                        background-color: rgb(0,70,67); 
+                        background-color: rgb(8, 102, 97); 
                     }
                 }
             }
@@ -643,7 +639,7 @@
                     font-size: 0.8rem;
                 }
                 .overlay {
-                    padding: 0.9rem;
+                    padding:0 0.9rem;
                     .overlay-parrafo {
                         font-size: 0.6rem;
                     } 
